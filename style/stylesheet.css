@@ -1,0 +1,193 @@
+/* Setting up fonts */
+@font-face {
+    font-family: 'VeniceClassic';
+    src: url('../fonts/VeniceClassic.woff2') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RetroGaming';
+    src: url('../fonts/RetroGaming.woff2') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Not found page */
+#NotFoundBody {
+    font-family: 'RetroGaming';
+    text-align: center;
+    background-image: url(../images/NotFoundBackground.png);
+    color: white;
+}
+
+html, #NotFoundPageDiv {
+    height: 100%;
+    cursor: url(../cursor/CursorZombie.png), auto !important;
+}
+
+#NotFoundPicture:hover {
+    cursor: url(../cursor/PointerZombie.png), auto !important;
+}
+
+/* Website paths */
+.WebsitepathsUl {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.WebsitepathsUl p {
+    font-size: 19px;
+    color: rgb(121, 68, 173);
+}
+
+.WebsitepathsUl a {
+    color: rgb(77, 43, 110);
+    text-decoration: none;
+}
+
+.WebsitepathsUl a:hover {
+    color: rgb(121, 68, 173);
+    cursor: url(../cursor/PointerZombie.png), auto !important;
+    font-size: 17px;
+}
+
+/* Index */
+.IndexAndAboutBody {
+    background-image: url(../images/starsBackground.gif);
+    font-family: 'RetroGaming';
+    text-align: center;
+    color: rgb(121, 68, 173);
+    cursor: url(../cursor/CursorZombie.png), auto !important;
+}
+
+.IndexAndAboutBody p{
+    font-size: 17px;
+    color: rgb(2, 117, 117);
+}
+
+.IndexAndAboutBorderDiv {
+    margin: 20px auto;
+    width: 1350px;
+    height: 800px;
+    border: 2px solid rgb(121, 68, 173);
+
+    display: flex;
+    flex-direction: row;
+}
+
+.IndexAndAboutWebsitePathsBorderDiv {
+    width: 160px;
+    height: 800px;
+    border-right: 2px solid rgb(121, 68, 173);
+    text-align: left;
+
+    flex-shrink: 0;
+}
+
+.IndexAndAboutWebsitePathstextDiv {
+    border-bottom: 2px solid rgb(121, 68, 173);
+    background-image: url(../images/starsBackground2.gif);
+    padding-top: 0.01px; /*this is to make sure the gif goes all the way to the top else it would not work */
+}
+
+.IndexAndAboutWebsitePathstextDiv p{
+    color: rgb(121, 68, 173);
+    text-align: center;
+}
+
+.IndexAndAboutWebsitePathsFishDiv {
+    border-bottom: 2px solid rgb(121, 68, 173);
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
+    text-align: center;
+}
+
+.IndexAndAboutMainDiv {
+    flex-grow: 1;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.IndexAndAboutMainDiv a {
+    color: rgb(77, 43, 110);
+}
+
+.IndexAndAboutMainDiv a:hover {
+    color: rgb(121, 68, 173);
+    cursor: url(../cursor/PointerZombie.png), auto !important;
+
+}
+
+.IndexAndAboutMainHomeTextDiv {
+    margin-left: -10px;
+    background-image: url(../images/starsBackground2.gif);
+    padding-top: 0.01px;
+
+    border-bottom: 2px solid rgb(121, 68, 173);
+}
+
+.IndexAndAboutMainHomeTextDiv p{
+    color: rgb(121, 68, 173);
+    text-align: center;
+}
+
+.IndexAndAboutFlameImg{
+    height: 16px;
+}
+
+.IndexAndAboutLogo {
+    font-size: 50px;
+    font-family: 'VeniceClassic';
+}
+
+#IndexMiscBorderDiv {
+    border-left: 2px solid rgb(121, 68, 173);
+    width: 300px;
+    height: 800px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+#IndexMiscTextDiv {
+    border-bottom: 2px solid rgb(121, 68, 173);
+    background-image: url(../images/starsBackground2.gif);
+}
+
+#IndexMiscTextDiv p{
+    color: rgb(121, 68, 173);
+}
+
+.IndexAndAboutDiscordImg {
+    height: 60px;
+}
+
+#IndexMiscUpdateLogTextDiv {
+    border-bottom: 2px solid rgb(121, 68, 173);
+}
+
+#IndexMiscUpdateLogTextDiv p{
+    color: rgb(121, 68, 173);
+}
+
+#IndexCounter {
+    padding-bottom: 5px;
+    border-bottom: 2px solid rgb(121, 68, 173);
+}
+
+#IndexCounter :hover {
+    cursor: url(../cursor/PointerZombie.png), auto !important;
+}
+
+#IndexMiscUpdateLogDiv {
+    overflow-y: auto;
+    height: 225px;
+}
+
+#IndexMiscUpdateLogDiv p {
+    font-size: 10px;
+    text-align: left;
+}
+
+/* About me */
