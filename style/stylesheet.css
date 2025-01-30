@@ -1,4 +1,11 @@
-/* Setting up fonts */
+/* Set up */
+:root {
+    --NotFoundColor: white;
+    --IndexColor: rgb(121, 68, 173);
+    --IndexColorAlt: rgb(77, 43, 110);
+    --IndexColorMainText: rgb(2, 117, 117);
+}
+
 @font-face {
     font-family: 'VeniceClassic';
     src: url('../fonts/VeniceClassic.woff2') format('truetype');
@@ -18,7 +25,7 @@
     font-family: 'RetroGaming';
     text-align: center;
     background-image: url(../images/NotFoundBackground.png);
-    color: white;
+    color: var(--NotFoundColor);
 }
 
 html, #NotFoundPageDiv {
@@ -31,119 +38,120 @@ html, #NotFoundPageDiv {
 }
 
 /* Website paths */
-.WebsitepathsUl {
+.IndexNavUl {
     list-style-type: none;
     padding-left: 0;
     margin-left: 0;
 }
 
-.WebsitepathsUl p {
+.IndexNavUl p {
     font-size: 19px;
-    color: rgb(121, 68, 173);
+    color: var(--IndexColor);
 }
 
-.WebsitepathsUl a {
-    color: rgb(77, 43, 110);
+.IndexNavUl a {
+    color: var(--IndexColorAlt);
     text-decoration: none;
 }
 
-.WebsitepathsUl a:hover {
-    color: rgb(121, 68, 173);
+.IndexNavUl a:hover {
+    color: var(--IndexColor);
     cursor: url(../cursor/PointerZombie.png), auto !important;
     font-size: 17px;
 }
 
 /* Index */
-.IndexAndAboutBody {
+.IndexBody {
     background-image: url(../images/starsBackground.gif);
     font-family: 'RetroGaming';
     text-align: center;
-    color: rgb(121, 68, 173);
+    color: var(--IndexColor);
     cursor: url(../cursor/CursorZombie.png), auto !important;
 }
 
-.IndexAndAboutBody p{
+.IndexBody p{
     font-size: 17px;
-    color: rgb(2, 117, 117);
+    color: var(--IndexColorMainText);
 }
 
-.IndexAndAboutBorderDiv {
+.IndexBorderDiv {
     margin: 20px auto;
     width: 1350px;
     height: 800px;
-    border: 2px solid rgb(121, 68, 173);
+    border: 2px solid var(--IndexColor);
 
     display: flex;
     flex-direction: row;
 }
 
-.IndexAndAboutWebsitePathsBorderDiv {
+.IndexNav {
     width: 160px;
     height: 800px;
-    border-right: 2px solid rgb(121, 68, 173);
+    border-right: 2px solid var(--IndexColor);
     text-align: left;
 
     flex-shrink: 0;
 }
 
-.IndexAndAboutWebsitePathstextDiv {
-    border-bottom: 2px solid rgb(121, 68, 173);
+.IndexNavtextDiv {
+    border-bottom: 2px solid var(--IndexColor);
     background-image: url(../images/starsBackground2.gif);
     padding-top: 0.01px; /*this is to make sure the gif goes all the way to the top else it would not work */
 }
 
-.IndexAndAboutWebsitePathstextDiv p{
-    color: rgb(121, 68, 173);
+.IndexNavtextDiv p{
+    color: var(--IndexColor);
     text-align: center;
 }
 
-.IndexAndAboutWebsitePathsFishDiv {
-    border-bottom: 2px solid rgb(121, 68, 173);
+.IndexNavFishDiv {
+    border-bottom: 2px solid var(--IndexColor);
     padding-top: 7.5px;
     padding-bottom: 7.5px;
     text-align: center;
 }
 
-.IndexAndAboutMainDiv {
+.IndexMainDiv {
     flex-grow: 1;
     text-align: left;
     padding-left: 10px;
 }
 
-.IndexAndAboutMainDiv a {
-    color: rgb(77, 43, 110);
+.IndexMainDiv a {
+    color: var(--IndexColorAlt)
+;
 }
 
-.IndexAndAboutMainDiv a:hover {
-    color: rgb(121, 68, 173);
+.IndexMainDiv a:hover {
+    color: var(--IndexColor);
     cursor: url(../cursor/PointerZombie.png), auto !important;
 
 }
 
-.IndexAndAboutMainHomeTextDiv {
+.IndexMainHomeTextDiv {
     margin-left: -10px;
     background-image: url(../images/starsBackground2.gif);
     padding-top: 0.01px;
 
-    border-bottom: 2px solid rgb(121, 68, 173);
+    border-bottom: 2px solid var(--IndexColor);
 }
 
-.IndexAndAboutMainHomeTextDiv p{
-    color: rgb(121, 68, 173);
+.IndexMainHomeTextDiv p{
+    color: var(--IndexColor);
     text-align: center;
 }
 
-.IndexAndAboutFlameImg{
+.IndexFlameImg{
     height: 16px;
 }
 
-.IndexAndAboutLogo {
+.IndexLogo {
     font-size: 50px;
     font-family: 'VeniceClassic';
 }
 
 #IndexMiscBorderDiv {
-    border-left: 2px solid rgb(121, 68, 173);
+    border-left: 2px solid var(--IndexColor);
     width: 300px;
     height: 800px;
     display: grid;
@@ -151,29 +159,29 @@ html, #NotFoundPageDiv {
 }
 
 #IndexMiscTextDiv {
-    border-bottom: 2px solid rgb(121, 68, 173);
+    border-bottom: 2px solid var(--IndexColor);
     background-image: url(../images/starsBackground2.gif);
 }
 
 #IndexMiscTextDiv p{
-    color: rgb(121, 68, 173);
+    color: var(--IndexColor);
 }
 
-.IndexAndAboutDiscordImg {
+.IndexDiscordImg {
     height: 60px;
 }
 
 #IndexMiscUpdateLogTextDiv {
-    border-bottom: 2px solid rgb(121, 68, 173);
+    border-bottom: 2px solid var(--IndexColor);
 }
 
 #IndexMiscUpdateLogTextDiv p{
-    color: rgb(121, 68, 173);
+    color: var(--IndexColor);
 }
 
 #IndexCounter {
     padding-bottom: 5px;
-    border-bottom: 2px solid rgb(121, 68, 173);
+    border-bottom: 2px solid var(--IndexColor);
 }
 
 #IndexCounter :hover {
@@ -191,3 +199,7 @@ html, #NotFoundPageDiv {
 }
 
 /* About me */
+#AboutBody {
+    background-image: url(../images/AboutPcBackground.jpg);
+    background-size: 100% 100%;
+}
