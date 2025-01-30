@@ -209,3 +209,30 @@ html, #NotFoundPageDiv {
 #AboutBody {
     text-align: initial;
 }
+
+#AboutBody p{
+    color: var(--IndexColor);
+}
+
+#AboutNav {
+    position: absolute;
+    top: 290px;
+    left: 19px;
+    height: 465px;
+    width: 357px;
+}
+
+#AboutNavFishDiv {
+    position: absolute;
+    top: 170px;
+    left: 287px;
+    height: 178.5px;
+    width: 255px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#AboutNavFishDiv img {
+    height: 140px;
+}
