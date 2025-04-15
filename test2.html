@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>All Displayed Images</title>
+  <style>
+    #imagesContainer {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .imageItem {
+      margin: 10px;
+    }
+    img {
+      max-width: 200px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>All Images Displayed So Far</h1>
+  <div id="imagesContainer">
+    <!-- Display images here -->
+  </div>
+
+  <script>
+    // Get the list of displayed images from localStorage
+    const displayedImages = JSON.parse(localStorage.getItem('displayedImages')) || [];
+
+    // Get the images container
+    const imagesContainer = document.getElementById('imagesContainer');
+
+    // Loop through the array and display the images
+    displayedImages.forEach(imageSrc => {
+      const imageItem = document.createElement('div');
+      imageItem.classList.add('imageItem');
+      
+      const imageElement = document.createElement('img');
+      imageElement.src = imageSrc;
+      
+      imageItem.appendChild(imageElement);
+      imagesContainer.appendChild(imageItem);
+    });
+
+    // If no images are stored
+    if (displayedImages.length === 0) {
+      imagesContainer.innerHTML = "<p>No images displayed yet.</p>";
+    }
+  </script>
+</body>
+</html>

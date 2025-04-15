@@ -1,0 +1,267 @@
+/* Set up */
+:root {
+    --NotFoundColor: white;
+    --IndexColor: rgb(121, 68, 173);
+    --IndexColorAlt: rgb(77, 43, 110);
+    --IndexColorMainText: rgb(2, 117, 117);
+}
+
+@font-face {
+    font-family: 'VeniceClassic';
+    src: url('../fonts/VeniceClassic.woff2') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RetroGaming';
+    src: url('../fonts/RetroGaming.woff2') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Not found page */
+#NotFoundBody {
+    font-family: 'RetroGaming';
+    text-align: center;
+    background-image: url(../images/NotFoundBackground.png);
+    color: var(--NotFoundColor);
+}
+
+html, #NotFoundPageDiv {
+    height: 100%;
+    cursor: url(../cursor/CursorZombie.png), auto !important;
+}
+
+#NotFoundPicture:hover {
+    cursor: url(../cursor/PointerZombie.png), auto !important;
+}
+
+/* Website paths */
+.IndexNavUl {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.IndexNavUl p {
+    font-size: 19px;
+    color: var(--IndexColor);
+}
+
+.IndexNavUl a {
+    color: var(--IndexColorAlt);
+    text-decoration: none;
+}
+
+.IndexNavUl a:hover {
+    color: var(--IndexColor);
+    cursor: url(../cursor/PointerZombie.png), auto !important;
+    font-size: 17px;
+}
+
+/* Index */
+.IndexBody {
+    background-image: url(../images/starsBackground.gif);
+    font-family: 'RetroGaming';
+    text-align: center;
+    color: var(--IndexColor);
+    cursor: url(../cursor/CursorZombie.png), auto !important;
+}
+
+.IndexBody p{
+    font-size: 17px;
+    color: var(--IndexColorMainText);
+}
+
+.IndexBorderDiv {
+    margin: 20px auto;
+    width: 1350px;
+    height: 800px;
+    border: 2px solid var(--IndexColor);
+
+    display: flex;
+    flex-direction: row;
+}
+
+.IndexNav {
+    width: 160px;
+    height: 800px;
+    border-right: 2px solid var(--IndexColor);
+    text-align: left;
+
+    flex-shrink: 0;
+}
+
+.IndexNavtextDiv {
+    border-bottom: 2px solid var(--IndexColor);
+    background-image: url(../images/starsBackground2.gif);
+    padding-top: 0.01px; /*this is to make sure the gif goes all the way to the top else it would not work */
+}
+
+.IndexNavtextDiv p{
+    color: var(--IndexColor);
+    text-align: center;
+}
+
+.IndexNavFishDiv {
+    border-bottom: 2px solid var(--IndexColor);
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
+    text-align: center;
+}
+
+.IndexMainDiv {
+    flex-grow: 1;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.IndexMainDiv a {
+    color: var(--IndexColorAlt);
+}
+
+.IndexMainDiv a:hover {
+    color: var(--IndexColor);
+    cursor: url(../cursor/PointerZombie.png), auto !important;
+}
+
+.IndexMainHomeTextDiv {
+    margin-left: -10px;
+    background-image: url(../images/starsBackground2.gif);
+    padding-top: 0.01px;
+
+    border-bottom: 2px solid var(--IndexColor);
+}
+
+.IndexMainHomeTextDiv p{
+    color: var(--IndexColor);
+    text-align: center;
+}
+
+.IndexFlameImg{
+    height: 16px;
+}
+
+.IndexLogo {
+    text-decoration: none;
+}
+
+.IndexLogo h1:hover{
+    cursor: url(../cursor/PointerZombie.png), auto !important;
+}
+
+.IndexLogo h1{
+    font-size: 50px;
+    font-family: 'VeniceClassic';
+    color: var(--IndexColor);
+}
+
+#IndexMiscBorderDiv {
+    border-left: 2px solid var(--IndexColor);
+    width: 300px;
+    height: 800px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+#IndexMiscTextDiv {
+    border-bottom: 2px solid var(--IndexColor);
+    background-image: url(../images/starsBackground2.gif);
+}
+
+#IndexMiscTextDiv p{
+    color: var(--IndexColor);
+}
+
+.IndexDiscordImg {
+    height: 60px;
+}
+
+#IndexMiscUpdateLogTextDiv {
+    border-bottom: 2px solid var(--IndexColor);
+}
+
+#IndexMiscUpdateLogTextDiv p{
+    color: var(--IndexColor);
+}
+
+#IndexCounter {
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--IndexColor);
+}
+
+#IndexCounter :hover {
+    cursor: url(../cursor/PointerZombie.png), auto !important;
+}
+
+#IndexMiscUpdateLogDiv {
+    overflow-y: auto;
+    height: 225px;
+}
+
+#IndexMiscUpdateLogDiv p {
+    font-size: 10px;
+    text-align: left;
+}
+
+/* About me */
+#AboutBody {
+    text-align: initial;
+}
+
+#AboutBody p{
+    color: var(--IndexColor);
+}
+
+#AboutTitleDiv {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+  }
+  
+  #AboutTitleDiv img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  #AboutTitleText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap; /* Prevents text from wrapping */
+  }
+  
+  #AboutTitleText a {
+    display: inline-block; /* Makes the <a> behave like a block but fit content */
+    text-decoration: none;
+    color: white;
+    font-size: 24px; /* Adjust as needed */
+    font-weight: bold;
+    padding: 5px 10px;
+  }
+
+#AboutNav {
+    position: absolute;
+    top: 290px;
+    left: 19px;
+    height: 465px;
+    width: 357px;
+}
+
+#AboutNavFishDiv {
+    position: absolute;
+    top: 170px;
+    left: 287px;
+    height: 178.5px;
+    width: 255px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#AboutNavFishDiv img {
+    height: 140px;
+}

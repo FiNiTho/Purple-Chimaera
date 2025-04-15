@@ -5,69 +5,55 @@
         <link rel="Stylesheet" href="style/stylesheet.css">
         <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     </head>
-    <body class="IndexBody">
-        <a class="IndexLogo" href="https://purple-chimaera.neocities.org/"><h1>purple.cheamira</h1></a>
-        <img src="images/starsDivider.gif"> 
-        <div class="IndexBorderDiv">
-            <!-- Start Navbar -->
-            <nav class="IndexNav">
-                <div class="IndexNavtextDiv">
-                    <p>Navigation</p>
-                </div>
-                <div class="IndexNavFishDiv">
-                    <img src="images/fish.gif">
-                </div>
-                <ul class="IndexNavUl">
-                        <li><a href="https://purple-chimaera.neocities.org/">>Home</a></li>
-                    <p>Personal</p>
-                        <li><a href="AboutMe.html">>About me <img src="images/UnderConstruction.png"><br></a></li>
-                    <p>Art</p>
-                        <!-- <li><a href="ArtPixel.html">>Pixel art <img src="images/UnderConstruction.png"><br></a></li> -->
-                        <li><a href="Photos.html">>Photos <img src="images/UnderConstruction.png"><br></a></li>
-                        <li><a href="Art3D.html">>3D <img src="images/UnderConstruction.png"><br></a></li>
-                    <p>Misc</p>
-                        <li><a href="Cheamira.html">>Cheamira <img src="images/UnderConstruction.png"><br></a></li>
-                </ul>
-            </nav>
-            <!-- End NavBar -->
-            <div class="IndexMainDiv">
-                <div class="IndexMainHomeTextDiv">
-                    <p>
-                        <img class="IndexFlameImg" src="images/flame_purple.gif">
-                         Home 
-                        <img class="IndexFlameImg" src="images/flame_purple.gif">
-                    </p>
-                </div>
-                <h1>This page is under construcion</h1>
-                <p>
-                    Welcome to purple.<a href="Cheamira.html">cheamira</a>!<br>
-                    If there is something wrong with the page press ctrl+f5.
-                </p>
-            </div>
-            <div id="IndexMiscBorderDiv">
-                <div id="IndexMiscTextDiv">
-                    <p>Misc</p>
-                </div>
-                <img class="IndexDiscordImg" src="https://discord.c99.nl/widget/theme-4/519148600652070934.png">
-                <img src="images/alwaysunderconstruction.gif">
-                <img src="images/bestviewedondesktop.gif">
-                <div id="IndexCounter">
-                    <!-- FC2 Counter  Starts here -->
-                    <script language="javascript" type="text/javascript" src="//counter1.fc2.com/counter.php?id=40036773&main=1"></script>
-                    <noscript>
-                        <img src="//counter1.fc2.com/counter_img.php?id=40036773&main=1" alt="Counter"/>
-                    </noscript>
-                    <!-- FC2 Counter  Ends here -->
-                </div>
-                <div id="IndexMiscUpdateLogTextDiv">
-                        <p>Update Log</p>
-                </div>
-                <div id="IndexMiscUpdateLogDiv">
-                    <p>20-11-2024 Added page not found</p>
-                    <p>19-11-2024 Added the update log</p>
-                    <p>17-11-2024 Created website</p>
-                </div>
-            </div>
-        </div>
+    <body id="indexBody">
+        <main class="container">
+            <table>
+                <tr>
+                    <!-- Menues -->
+                    <td id="menuTd">
+                        <!-- NavBar Div -->
+                        <div class="navBar">
+                            <h1>Navigation</h1>
+                            <a href="./about.html">About me</a>
+                            <a href="./about.html">About me</a>
+                            <a href="./about.html">About me</a>
+                        </div>
+                        <!-- Settings Div -->
+                         <div class="navBar">
+                            <h1>Settings</h1>
+                            <button id="themeToggle">Toggle Dark Mode</button>
+                         </div>
+                    </td>
+                    <!-- Main -->
+                    <td id="mainTd">
+                        <!-- Main/Welcome Div -->
+                        <div class="mainDiv">
+                            <h1>Welcome to purple.cheamira!</h1>
+                            <p>I like Skibididi</p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </main>
     </body>
+    <script>
+        const toggle = document.getElementById('themeToggle');
+        const root = document.documentElement;
+    
+        // Load saved theme on page load, default to dark mode
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark' || savedTheme === null) {
+            root.classList.add('dark');
+            document.body.classList.add('dark');
+            localStorage.setItem('theme', 'dark'); // Set default in localStorage
+        }
+
+        toggle.addEventListener('click', () => {
+            root.classList.toggle('dark');
+            document.body.classList.toggle('dark');
+    
+            const isDark = root.classList.contains('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+    </script>
 </html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weekly Image</title>
+  <style>
+    #countdown {
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <img id="weeklyImage" src="" alt="Weekly Image">
+  <div id="countdown">Time until next image: Calculating...</div>
+  
+  <script>
+    const catImages = [
+      'images/weeklyCat/week1.jpg',
+      'images/weeklyCat/week2.jpg',
+      'images/weeklyCat/week3.jpg',
+      'images/weeklyCat/week4.jpg',
+      'images/weeklyCat/week5.jpg',
+      'images/weeklyCat/week6.jpg',
+      'images/weeklyCat/week7.jpg',
+      'images/weeklyCat/week8.jpg'
+    ];
+
+    // Set the start week number (0 = image1, 1 = image2, etc.)
+    const startWeek = 2; // Change this to control the starting image
+
+    // Function to get current week number
+    function getWeekNumber() {
+      const now = new Date();
+      const start = new Date(now.getFullYear(), 0, 1);
+      const diff = now - start;
+      const oneWeek = 1000 * 60 * 60 * 24 * 7;
+      return Math.floor(diff / oneWeek);
+    }
+
+    // Function to update image
+    function updateImage() {
+      const week = getWeekNumber();
+      const imageIndex = (week + startWeek) % catImages.length; // Adjust the starting point
+      const imageElement = document.getElementById('weeklyImage');
+      imageElement.src = catImages[imageIndex];
+
+      // Store the displayed image in localStorage
+      let displayedImages = JSON.parse(localStorage.getItem('displayedImages')) || [];
+      if (!displayedImages.includes(catImages[imageIndex])) {
+        displayedImages.push(catImages[imageIndex]);
+        localStorage.setItem('displayedImages', JSON.stringify(displayedImages));
+      }
+    }
+
+    // Function to get time until next week
+    function getTimeUntilNextWeek() {
+      const now = new Date();
+      const nextWeek = new Date(now);
+      const daysUntilMonday = (8 - now.getDay()) % 7 || 7; // If today is Sunday, next Monday is tomorrow
+      nextWeek.setDate(now.getDate() + daysUntilMonday);
+      nextWeek.setHours(0, 0, 0, 0);
+      return nextWeek - now; // Milliseconds until next week
+    }
+
+    // Function to format countdown
+    function formatCountdown(ms) {
+      if (ms <= 0) return 'Updating now...';
+      const days = Math.floor(ms / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((ms % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((ms % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((ms % (1000 * 60)) / 1000);
+      return `Time until next image: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    // Function to update countdown display
+    function updateCountdown() {
+      const countdownElement = document.getElementById('countdown');
+      const timeLeft = getTimeUntilNextWeek();
+      countdownElement.textContent = formatCountdown(timeLeft);
+      // If week just changed, update image
+      if (timeLeft <= 0) {
+        updateImage();
+      }
+    }
+
+    // Initial setups
+    updateImage(); // Set initial image
+    updateCountdown(); // Set initial countdown
+
+    // Update countdown every second
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
