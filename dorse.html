@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>purple.cheamira/AboutMe</title>
+        <link rel="Stylesheet" href="style/stylesheet.css">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    </head>
+    <style>
+        #dorse:hover {
+            cursor: url(cursor/DuckCursor.png), auto !important;
+        }
+    </style>
+    <body
+        style="
+        background-image: url(images/Dorse/dorseBackground.gif);
+        background-repeat: repeat;
+        background-size: 150px;
+
+        cursor: url(cursor/DuckCursor.png), auto !important;"
+    >
+        <h1>Dorse.</h1>
+        <button id="dorse">
+            <img src="images/Dorse/Dorse.png" alt="The most magical image ever created" style="width: 1000px;">
+        </button>
+
+        <div hidden class="moreDorse" style="background-color: rgba(255, 255, 255, 0.582);">
+            <h1>The Dorse</h1>
+            <ol>
+                <li>History of the Dorse</li>
+                <li>Dorse family tree</li>
+                <li>Family pictures</li>
+            </ol>
+
+            <h2>History of the Dorse</h2>
+            <p>
+                The Dorse is a creature that came to life when the duck Bernardo and the horse Falimpa loved each other very much.
+                <br>
+                They finally felt like they could take a step forward in their relationship, so they wanted a child but there seemed to be one problem: Falimpa is a horse and Bernardo is a duck.
+                <br>
+                The magic of thier love mad it so it magicly worked, and a few months later, Falimpa laid a horse-shaped egg. After a few days, the egg cracked open, and the first magical, mythical Dorse was created.
+                <br>
+                It looked like a horse with a duck as its head.
+            </p>
+
+            <h2>Dorse family tree</h2>
+            <img src="images/Dorse/dorseTree.png">
+
+            <h2>Family pictures</h2>
+            <p>Brick</p>
+            <img src="images/Dorse/Dorse.png" style="width: 250px;">
+            <p>Stone</p>
+            <img src="images/Dorse/DorseUhhh.jpg" style="width: 250px;">
+            <p>Ronald (The ugly one)</p>
+            <img src="images/Dorse/DorseUgly.jpg" style="width: 250px;">
+            <p>SnoobyFlooby</p>
+            <img src="images/Dorse/brownDorse.jpg" style="width: 250px;">
+        </div>
+
+
+        <audio id="clickSound" src="sounds/quack.mp3" preload="auto"></audio>
+        
+        <script>
+        const sound = document.getElementById("clickSound");
+
+        document.body.addEventListener("click", () => {
+            sound.currentTime = 0;
+            sound.play();
+        });
+        </script>
+
+    </body>
+    <script>
+        const button = document.getElementById("dorse");
+        const form = document.querySelector(".moreDorse");
+        
+        button.addEventListener("click", () => {
+            form.hidden = !form.hidden;
+        });
+    </script>
+</html>
