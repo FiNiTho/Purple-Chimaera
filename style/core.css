@@ -1,0 +1,47 @@
+/* Core */
+:root {
+    --NotFoundColor: white;
+    --MainColor: #7944ad;
+    --MainColorAlt: #300e51;
+    --SecondaryColor: #43aaaa;
+
+    --AboutColor: #3d45cc;
+    --AboutColorDarker: #2c3192;
+    --AboutColorAlt: #499dcc;
+    --AboutColorAltDarker: #326786;
+    --AboutBackgroundColor: #080a2b;
+
+    --border: 3px solid var(--MainColor);
+}
+
+@font-face {
+    font-family: 'VeniceClassic';
+    src: url('../fonts/VeniceClassic.woff2') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RetroGaming';
+    src: url('../fonts/RetroGaming.woff2') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+Body {
+    margin: 0px;
+    background-image: url(../images/starsBackground.gif);
+    background-repeat: repeat;
+    background-size: 300px;
+    font-family: 'RetroGaming';
+}
+
+p {
+    color: var(--SecondaryColor);
+    font-size: 17px;
+}
+
+html {
+    height: 100%;
+    cursor: url(../cursor/cursor.png), auto !important;
+}

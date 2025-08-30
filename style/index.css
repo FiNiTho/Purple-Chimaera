@@ -1,0 +1,68 @@
+/* Index */
+@import url("core.css");
+
+/* init */
+a {
+    margin: 0;
+}
+
+b {
+    color: var(--MainColor);
+}
+/* end init */
+
+
+/* buttons */
+#Btn {
+    transition: filter, transform 0.3s;
+    cursor: url(../cursor/cursorSel.png), auto !important;
+}
+
+#Btn:hover {
+    filter: brightness(1.10);
+    transform: scale(1.02);
+}
+
+#Btn:active {
+    filter: brightness(1);
+    transform: scale(0.98);
+}
+/* end buttons */
+
+
+/* main container */
+main {
+    margin-top: 50px;
+    margin-left: 21%;
+    margin-right: 21%;
+    border: var(--border);
+}
+/* the containers for each section */
+/* inside main container */
+#logo {
+    padding: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* makes padding stay inside the div */
+    box-sizing: border-box;
+}
+
+#info {
+    border-top: var(--border);
+    padding: 10px 30px;
+    width: 100%;
+    display: flex;
+    /* makes padding stay inside the div */
+    box-sizing: border-box;
+}
+
+#nav {
+    border-top: var(--border);
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+/* end containers */

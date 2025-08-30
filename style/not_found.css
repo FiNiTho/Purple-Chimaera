@@ -1,0 +1,17 @@
+/* Not found */
+@import url("core.css");
+
+p {
+    color: white;
+}
+
+#NotFoundBody {
+    font-family: 'RetroGaming';
+    text-align: center;
+    background-image: url(../images/NotFoundBackground.png);
+    color: var(--NotFoundColor);
+}
+
+#NotFoundPicture:hover {
+    cursor: url(../cursor/cursorSel.png), auto !important;
+}
