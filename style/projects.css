@@ -1,1 +1,59 @@
+/* Projects */
 @import url("core.css");
+
+main {
+    margin-top: 20px;
+    margin-left: 17%;
+    margin-right: 17%;
+    /* border: var(--border); */
+}
+
+#projectPageLogo {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.project {
+    border: var(--border);
+    display: flex;
+}
+
+.logo {
+    padding: 10px;
+    background-image: url(../images/starsBackground2.gif);
+    background-size: 130%;
+    box-sizing: border-box;
+    border-right: var(--border);
+}
+
+.info {
+    padding: 10px;
+}
+
+h1 {
+    color: var(--MainColor);
+}
+
+/* buttons */
+.Btn {
+    transition: filter, transform 0.2s;
+    /* cursor: url(../cursor/cursorSel.png), auto !important; */
+}
+
+.Btn:hover {
+    filter: brightness(1.10);
+    transform: scale(1.02);
+}
+
+.Btn:active {
+    filter: brightness(1);
+    transform: scale(0.98);
+}
+/* end buttons */

@@ -9,33 +9,38 @@ a {
 b {
     color: var(--MainColor);
 }
+
+h1 {
+    color: var(--MainColor);
+}
 /* end init */
 
 
 /* buttons */
-#Btn {
-    transition: filter, transform 0.3s;
-    cursor: url(../cursor/cursorSel.png), auto !important;
+.Btn {
+    transition: filter, transform 0.2s;
+    /* cursor: url(../cursor/cursorSel.png), auto !important; */
 }
 
-#Btn:hover {
+.Btn:hover {
     filter: brightness(1.10);
     transform: scale(1.02);
 }
 
-#Btn:active {
+.Btn:active {
     filter: brightness(1);
     transform: scale(0.98);
 }
 /* end buttons */
 
+/* wrapper */
+
 
 /* main container */
 main {
-    margin-top: 50px;
-    margin-left: 21%;
-    margin-right: 21%;
-    border: var(--border);
+    margin-top: 70px;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 /* the containers for each section */
 /* inside main container */
@@ -57,12 +62,9 @@ main {
     box-sizing: border-box;
 }
 
-#nav {
-    border-top: var(--border);
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
+.main {
+    border: var(--border);
 }
+
+
 /* end containers */

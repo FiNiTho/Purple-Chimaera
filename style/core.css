@@ -32,7 +32,7 @@ Body {
     margin: 0px;
     background-image: url(../images/starsBackground.gif);
     background-repeat: repeat;
-    background-size: 300px;
+    background-size: 21%;
     font-family: 'RetroGaming';
 }
 
@@ -44,4 +44,33 @@ p {
 html {
     height: 100%;
     cursor: url(../cursor/cursor.png), auto !important;
+}
+
+a {
+    cursor: url(../cursor/cursorSel.png), auto !important;
+    text-decoration: none;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+}
+
+#nav {
+    background-size: 150%;
+    border-right: var(--border);
+    padding: 20px;
+    
+
+    background-image: url(../images/starsBackground2.gif);
+}
+
+#sticky {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    text-align: center;
 }
