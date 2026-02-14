@@ -56,10 +56,13 @@ a {
     display: flex;
 }
 
+
+/* --NAV BAR-- */
 #nav {
     background-size: 150%;
     border-right: var(--border);
     padding: 20px;
+    min-width: 289px;
     
 
     background-image: url(../images/starsBackground2.gif);
@@ -74,3 +77,29 @@ a {
     gap: 15px;
     text-align: center;
 }
+
+/* TODO: rename this to something more readable */
+#thingy {
+    display: flex;
+    justify-content: center;
+    border-bottom: var(--border);
+}
+
+/* buttons */
+.Btn {
+    transition: filter, transform 0.2s;
+    /* cursor: url(../cursor/cursorSel.png), auto !important; */
+}
+
+.Btn:hover {
+    filter: brightness(1.10);
+    transform: scale(1.02);
+}
+
+.Btn:active {
+    filter: brightness(1);
+    transform: scale(0.98);
+}
+/* end buttons */
+
+/* --END NAVBAR-- */

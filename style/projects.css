@@ -40,20 +40,3 @@ container {
 h1 {
     color: var(--MainColor);
 }
-
-/* buttons */
-.Btn {
-    transition: filter, transform 0.2s;
-    /* cursor: url(../cursor/cursorSel.png), auto !important; */
-}
-
-.Btn:hover {
-    filter: brightness(1.10);
-    transform: scale(1.02);
-}
-
-.Btn:active {
-    filter: brightness(1);
-    transform: scale(0.98);
-}
-/* end buttons */

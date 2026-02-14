@@ -1,0 +1,34 @@
+@import url(core.css);
+
+#borderimg {
+  
+}
+
+main {
+    margin-top: 120px;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 100vh;
+    width:100%;
+
+    border-left: 48px solid transparent;
+    border-right: 48px solid transparent;
+    border-top: 48px solid transparent;
+    padding: 15px;
+    border-image: url(../images/pipes.png) 48 round;
+}
+
+#wrapper {
+    border-left: 48px solid transparent;
+    border-right: 48px solid transparent;
+}
+
+html {
+    height: 100%;
+    cursor: url(../cursor/fish-cursor.png), auto !important;
+}
+
+a {
+    cursor: url(../cursor/fish-cursor-hover.png), auto !important;
+    text-decoration: none;
+}
